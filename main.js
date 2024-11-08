@@ -160,8 +160,8 @@
 
 /******* Modules *******/
 
-import { a, tab, sum } from "./module.js";
+// import { a, tab, sum } from "./module.js";
 
-console.log(a);
-console.log(tab);
-console.log(sum(5, 9));
+// console.log(a);
+// console.log(tab);
+// console.log(sum(5, 9));
