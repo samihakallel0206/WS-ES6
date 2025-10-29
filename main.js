@@ -20,45 +20,46 @@
 
 // // // console.log(x);
 // let x = 2;
-
 // console.log("x:", x);
 
 // let age = 10;
 // for (let i = 0; i < 1; i++) {
-//   //   let age = 3;
-//   //   console.log("age:", age);
-//   var x = 2;
-//   if (x == 2) {
-//     let age = 50;
-//     // age = 20;
-//     // let age = 20;
-//     // console.log(age);
-//   }
+// let age = 3;
+// console.log("age:", age);
+// var x = 2;
+// if (x == 2) {
+// let age = 50;
+// age = 20;
+// let age = 20;
+// console.log(age);
+// }
 
-//   console.log("age dans la boucle", age);
+// console.log("age dans la boucle", age);
 // }
 // console.log("age endehors de la boucle", age);
 // console.log(x);
 
 // for (let i = 0; i < 3; i++) {
-//   console.log(x);
+//   console.log(i);
 // }
+// console.log(i);
 //todo Arrow function */
 
-let test1 = function () {
-  return 5;
-};
-console.log(test1());
+// let test1 = function () {
+//   return 5;
+// };
+// console.log(test1());
 
-let arrowTest = () => {
-  return 5;
-};
-let arrowTest1 = () => 5;
+// let arrowTest = () => {
+//   return 5;
+// };
+// let arrowTest1 = () => 5;
 
 // console.log(arrowTest1());
 
-// let arrowTest = () => (50 > 25 ? true : false);
+// let arrowTest = () => (5 > 25 ? true : false);
 // 5 > 0 ? true : false;
+
 // if (5 > 0) {
 //   return true;
 // } else {
@@ -72,7 +73,7 @@ let arrowTest1 = () => 5;
 //   return n * 2;
 // };
 // let arrowTest1 = (n) => n * 2;
-// let arrowTest3 = (n) => n * 2;
+// let arrowTest3 = (n) => n / 2;
 // console.log(arrowTest3(20));
 // btn.addeventListener('click', () => {
 
@@ -98,7 +99,7 @@ const title = "Jack and Jill Went Up the Hill";
 // console.log(str.includes("script"));
 // console.log(str.includes("Script", 4));
 // console.log(str.repeat(4));
-
+// console.log(str.slice());
 //*! Template Literals */
 
 // const myName = "Meriem";
@@ -112,14 +113,15 @@ const title = "Jack and Jill Went Up the Hill";
 //   " \n" +
 //   "Have a nice day \n" +
 //   "I wish you the best";
-// backtecks: algr + 7; ``
+// // backtecks: algr + 7; ``
 // let now = `Hello world,
 
 //  I am
-//                   ${myName}
-// Have a nice day I wish you the best`;
+//         ${myName}
+// Have a nice day I wish
+//       you the best`;
 
-// // console.log(perviously);
+// console.log(perviously);
 // console.log(now);
 
 //*! Spread Operator ... */
@@ -131,6 +133,8 @@ const title = "Jack and Jill Went Up the Hill";
 // let allArrays = [...array1, ...array2];
 // console.log(allArrays);
 // console.log([1, 5, ...allArrays, 0]);
+// console.log([...array1, 5]);
+
 // console.log(allArrays);
 // function sum(x, y, z) {
 //   return x + y + z;
@@ -143,15 +147,19 @@ const title = "Jack and Jill Went Up the Hill";
 // console.log([...numbers, 4]);
 //*! Array Methodes */
 
-// let array = [10, 200, 15, 20, 1, 80, 4];
+// let array = [10, 20, 15, 20, 1, 4];
 // console.log(array);
 
-// let array1 = array.map((x) => console.log(x / 2));
-// array.forEach((el) => el * 2);
+// let array2 = array.map((elt) => elt * 2);
+// let array1 = [1, 2, 3, 4];
 
-// console.log(array1);
+// array1.forEach((el, index, arr) => {
+//   arr[index] = el * 2;
+// });
+
+// console.log(array1); // [2, 4, 6, 8] — maintenant modifié
 // console.log(array);
-// let array2 = array.filter((x, i) => x < 20);
+// let array2 = array.filter((x) => x <= 20);
 // console.log(array2);
 // let array3 = array.reduce((acc, cur) => acc + cur, 0);
 // console.log(array3);
@@ -170,13 +178,13 @@ const title = "Jack and Jill Went Up the Hill";
 //   email: "jhon@gmail.com",
 // };
 // let { firstName, age, city } = contact;
-// // // firstName = "foulan";
+// // // // firstName = "foulan";
 // console.log(
 //   `My name is: ${firstName}, My age is: ${age} and I am from ${city}`
 // );
 
 //!Ternary Operator */
-
+//
 // let x = 2;
 // if (x > 10) {
 //   console.log("is greater than 10");
@@ -198,8 +206,8 @@ const title = "Jack and Jill Went Up the Hill";
 
 // //! Modules*/
 
-// import { a, tab, sum } from "./module.js";
+import { a, tab, sum } from "./module.js";
 
-// console.log(a);
-// console.log(tab);
-// console.log(sum(5, 9));
+console.log(a);
+console.log(tab);
+console.log(sum(5, 9));
