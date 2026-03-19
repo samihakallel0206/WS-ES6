@@ -1,4 +1,4 @@
-//todo Variables : var * let * const */
+//! Variables : var * let * const */
 
 // const x = 20;
 // console.log(x);
@@ -9,14 +9,20 @@
 // console.log(x);
 // var x = true;
 // console.log(x);
+//  let x = 20;
+//  console.log(x);
+//  x = "bonjour";
+//  console.log(x);
+// portée de let dans le bloc de définition: if
+// if (true) {
+//   let x = 20;
+//   console.log(x);
+//   x = "bonjour";
+//   console.log(x);
+// }
 
-// let x = 20;
+// // var x = 20;
 // console.log(x);
-// x = "bonjour";
-// console.log(x);
-
-// console.log(x);
-// var x = 20;
 
 // // // console.log(x);
 // let x = 2;
@@ -24,22 +30,25 @@
 
 // let age = 10;
 // for (let i = 0; i < 1; i++) {
-// let age = 3;
-// console.log("age:", age);
-// var x = 2;
-// if (x == 2) {
-// let age = 50;
-// age = 20;
-// let age = 20;
-// console.log(age);
-// }
+//   let age = 3;
+//   console.log("age:", age);
+//   let x = 5;
+//   // var x = 2;
+//   if (x === 2) {
+//     let age = 50;
+//     age = 20;
+//     var y = 1;
+//     // let age = 20;
+//     console.log(age);
+//   }
 
-// console.log("age dans la boucle", age);
+//   console.log("age dans la boucle", age);
+//   console.log("y", y);
 // }
-// console.log("age endehors de la boucle", age);
+// // console.log("age endehors de la boucle", age);
 // console.log(x);
 
-// for (let i = 0; i < 3; i++) {
+// for (var i = 0; i < 3; i++) {
 //   console.log(i);
 // }
 // console.log(i);
@@ -57,7 +66,7 @@
 
 // console.log(arrowTest1());
 
-// let arrowTest = () => (5 > 25 ? true : false);
+// let arrowTest = () => (5 <= 5 ? true : false);
 // 5 > 0 ? true : false;
 
 // if (5 > 0) {
@@ -72,7 +81,7 @@
 // let arrowTest = function (n) {
 //   return n * 2;
 // };
-// let arrowTest1 = (n) => n * 2;
+// let arrowTest1 = (n) => n ** 2;
 // let arrowTest3 = (n) => n / 2;
 // console.log(arrowTest3(20));
 // btn.addeventListener('click', () => {
@@ -81,7 +90,7 @@
 
 //todo String Methods */
 
-const title = "Jack and Jill Went Up the Hill";
+// const title = "Jack and Jill Went Up the Hill";
 
 // console.log(title.startsWith("Jack"));
 // console.log(title.startsWith("jack"));
@@ -92,14 +101,16 @@ const title = "Jack and Jill Went Up the Hill";
 // console.log(title.endsWith("Up", 21));
 
 // let email = "admin@example.com";
-// console.log(email.includes("co"));
+// console.log(email.includes("con"));
 
 // let str = "JavaScript";
 // console.log(str.includes("Script"));
-// console.log(str.includes("script"));
+// console.log(str.toUpperCase());
+// console.log("script".toUpperCase());
+// console.log(str.toUpperCase().includes("scRipt".toUpperCase()));
 // console.log(str.includes("Script", 4));
-// console.log(str.repeat(4));
-// console.log(str.slice());
+// console.log(str.repeat(10));
+// console.log(str.slice(1, 5));
 //*! Template Literals */
 
 // const myName = "Meriem";
@@ -108,12 +119,12 @@ const title = "Jack and Jill Went Up the Hill";
 //   " \n" +
 //   "\n" +
 //   "I am" +
-//   " " +
+//   "                " +
 //   myName +
 //   " \n" +
 //   "Have a nice day \n" +
 //   "I wish you the best";
-// // backtecks: algr + 7; ``
+// // backtecks: algr + 7; `` "" ''
 // let now = `Hello world,
 
 //  I am
@@ -132,10 +143,10 @@ const title = "Jack and Jill Went Up the Hill";
 
 // let allArrays = [...array1, ...array2];
 // console.log(allArrays);
+// console.log([1, 5, allArrays, 0]);
 // console.log([1, 5, ...allArrays, 0]);
 // console.log([...array1, 5]);
 
-// console.log(allArrays);
 // function sum(x, y, z) {
 //   return x + y + z;
 // }
@@ -144,29 +155,32 @@ const title = "Jack and Jill Went Up the Hill";
 // console.log(numbers);
 // console.log(...numbers);
 // console.log(sum(...numbers));
+// console.log(sum(numbers));
 // console.log([...numbers, 4]);
 //*! Array Methodes */
 
-// let array = [10, 20, 15, 20, 1, 4];
 // console.log(array);
 
-// let array2 = array.map((elt) => elt * 2);
-// let array1 = [1, 2, 3, 4];
-
-// array1.forEach((el, index, arr) => {
+// let array2 = array.map((elt) => elt ** 2); //parcour comme for
+// console.log(array2);
+// console.log(array);
+// let arrayForEach = [1, 2, 3, 4];
+// console.log(arrayForEach);
+// arrayForEach.forEach((el, index, arr) => {
 //   arr[index] = el * 2;
 // });
 
-// console.log(array1); // [2, 4, 6, 8] — maintenant modifié
+// console.log(arrayForEach); // [2, 4, 6, 8] — maintenant modifié
 // console.log(array);
-// let array2 = array.filter((x) => x <= 20);
+// let array2 = array.filter((elt) => elt % 2 === 0);
 // console.log(array2);
-// let array3 = array.reduce((acc, cur) => acc + cur, 0);
+// let array3 = array.reduce((sum, cur) => sum + cur,0);
 // console.log(array3);
-// let array4 = array.find((el) => el > 20);
-// console.log(array4);
-// let array5 = array.findIndex((el) => el > 25);
-// console.log(array5);
+// let elt = array.find((el) => el < 3);
+// console.log(elt);
+// let array = [10, 6, 15, 20, 1, 4];
+// let index = array.findIndex((el) => el > 25);
+// console.log(index);
 
 //!Destructuring */
 
@@ -178,13 +192,23 @@ const title = "Jack and Jill Went Up the Hill";
 //   email: "jhon@gmail.com",
 // };
 // let { firstName, age, city } = contact;
-// // // // firstName = "foulan";
+// // firstName = "foulan";
 // console.log(
-//   `My name is: ${firstName}, My age is: ${age} and I am from ${city}`
+//   `My name is: ${firstName}, My age is: ${age} and I am from ${city}`,
 // );
+// remarque: assessment;
+// let student1 = { name: "John" };
+// let student2 = { name1: "Mary" };
+// let newObject = {
+//   ...student1,
+//   ...student2,
+//   name2: "Mourad",
+// };
+
+// console.log(newObject);
 
 //!Ternary Operator */
-//
+
 // let x = 2;
 // if (x > 10) {
 //   console.log("is greater than 10");
@@ -192,7 +216,7 @@ const title = "Jack and Jill Went Up the Hill";
 //   console.log("is  less than 10");
 // }
 
-// // // Condition ? If true : If false
+// // Condition ? If true : If false
 
 // x > 10 ? console.log("is greater than 10") : console.log("is greater less 10");
 
@@ -202,12 +226,12 @@ const title = "Jack and Jill Went Up the Hill";
 // if (x > 10) {
 //   console.log("is greater than 10");
 // }
-// x > 10 ? console.log("is greater than 10") : null; //ya pas de else
+// x > 10 ? console.log("is greater than 10") :null; //ya pas de else
 
-// //! Modules*/
+// // //! Modules*/
 
-import { a, tab, sum } from "./module.js";
+// import { a, tab, sum } from "./module.js";
 
-console.log(a);
-console.log(tab);
-console.log(sum(5, 9));
+// console.log(a);
+// console.log(tab);
+// console.log(sum(2, 8));
